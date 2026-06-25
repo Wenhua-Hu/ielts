@@ -1,6 +1,39 @@
-site_name: IELTS Question Database
-site_url: https://ielts-question-database.com/mysite
+site_name: 学习资料库
+site_url: https://xiaoqinmu.netlify.app
+copyright: 版权所有者 - 雪穗
 theme:
-  name: material
   name: ivory
+  custom_dir: overrides
+extra_css:
+  - stylesheets/extra.css
+extra_javascript:
+  - javascripts/extra.js
+nav:
+  - 首页: index.md
+  - 雅思学习:
+    - 口语:
+      - 2026-01: ielts/speaking/2026-01.md
+      - 2026-02: ielts/speaking/2026-02.md
+      - 2026-03: ielts/speaking/2026-03.md
+      - 2026-04: ielts/speaking/2026-04.md
+      - 2026-05: ielts/speaking/2026-05.md
+      - 额外补充: ielts/speaking/extra.md
+    - 听力:
+      - 2026-01: ielts/listening/2026-01.md
+      - 2026-02: ielts/listening/2026-02.md
+      - 2026-03: ielts/listening/2026-03.md
+      - 2026-04: ielts/listening/2026-04.md
+      - 2026-05: ielts/listening/2026-05.md
+      - 额外补充: ielts/listening/extra.md
+    - 写作:
+      - 2026-01: ielts/writing/2026-01.md
+      - 2026-02: ielts/writing/2026-02.md
+      - 2026-03: ielts/writing/2026-03.md
+      - 2026-04: ielts/writing/2026-04.md
+      - 2026-05: ielts/writing/2026-05.md
+      - 额外补充: ielts/writing/extra.md
+  - 医学课程: medical/index.md
+  - 视频剪辑: video-editing/index.md
+  - 日常知识: daily-knowledge/index.md
+  - 炒股关注: stock/index.md
 

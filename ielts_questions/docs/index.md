@@ -1,11 +1,49 @@
-# Home
+# 学习资料库
 
-This is the homepage of the IELTS Question Database, covering Listening, Speaking, and Writing question types. The questions are collected from past exams and organized by date for your convenience. In addition, the database includes practice questions gathered from various online sources. To make your preparation easier, answers are provided with the support of an LLM model.
+本资料库涵盖多个学科领域，包括雅思学习、医学课程、视频剪辑和日常知识。
 
+<div class="grid cards" markdown>
 
-## SUBJECTS
-* Listening
-* Speaking
-* Writing
+-   **雅思学习**
+
+    ---
+
+    涵盖雅思听力、口语和写作题型。题目收集自历年考试，按日期整理，提供答案解析。
+
+    [查看雅思学习 →](ielts/index.md)
+
+-   **医学课程**
+
+    ---
+
+    医学相关课程资料和知识点整理。
+
+    [查看医学课程 →](medical/index.md)
+
+-   **视频剪辑**
+
+    ---
+
+    视频剪辑技巧、教程和案例分析。
+
+    [查看视频剪辑 →](video-editing/index.md)
+
+-   **日常知识**
+
+    ---
+
+    日常生活实用知识和常识整理。
+
+    [查看日常知识 →](daily-knowledge/index.md)
+
+-   **炒股关注**
+
+    ---
+
+    股票投资知识、技术分析和投资策略。
+
+    [查看炒股关注 →](stock/index.md)
+
+</div>
 
 
