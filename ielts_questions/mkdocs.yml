@@ -1,0 +1,6 @@
+site_name: IELTS Question Database
+site_url: https://ielts-question-database.com/mysite
+theme:
+  name: material
+  name: ivory
+
