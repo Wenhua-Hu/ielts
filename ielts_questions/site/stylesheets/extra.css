@@ -267,6 +267,10 @@ main footer.site-footer {
   background: #020617;
 }
 
+.pdf-mobile-open {
+  display: none;
+}
+
 @media screen and (min-width: 768px) {
   #main:has(.pdf-viewer) {
     margin: 0 !important;
@@ -280,9 +284,61 @@ main footer.site-footer {
 
 @media screen and (max-width: 767px) {
   .pdf-viewer {
-    height: calc(100vh - 92px) !important;
-    height: calc(100dvh - 92px) !important;
-    min-height: 420px !important;
+    display: none !important;
+  }
+
+  .pdf-mobile-open {
+    display: grid;
+    place-items: center;
+    min-height: calc(100vh - 92px);
+    min-height: calc(100dvh - 92px);
+    padding: 1.25rem;
+    background:
+      radial-gradient(circle at 20% 10%, rgba(34, 211, 238, 0.18), transparent 28%),
+      linear-gradient(180deg, #020617, #0f172a);
+  }
+
+  .pdf-mobile-card {
+    width: min(100%, 420px);
+    box-sizing: border-box;
+    padding: 1.35rem;
+    border: 1px solid rgba(103, 232, 249, 0.22);
+    border-radius: 22px;
+    color: #cbd5e1;
+    background: rgba(15, 23, 42, 0.88);
+    box-shadow: 0 22px 60px rgba(0, 0, 0, 0.32);
+    text-align: center;
+  }
+
+  .pdf-mobile-icon {
+    display: block;
+    margin-bottom: 0.8rem;
+    font-size: 2.4rem;
+  }
+
+  .pdf-mobile-card strong {
+    display: block;
+    color: #f8fafc;
+    font-size: 1.1rem;
+  }
+
+  .pdf-mobile-card p {
+    margin: 0.8rem 0 1.1rem;
+    color: #94a3b8;
+    line-height: 1.7;
+  }
+
+  .pdf-mobile-card a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 42px;
+    padding: 0 1.1rem;
+    border-radius: 999px;
+    color: #020617;
+    background: linear-gradient(135deg, #67e8f9, #c4b5fd);
+    font-weight: 900;
+    text-decoration: none;
   }
 }
 
