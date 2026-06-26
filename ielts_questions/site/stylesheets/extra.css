@@ -16,6 +16,276 @@ body {
   background: #f8fafc;
 }
 
+/* 内容页：隐藏顶部面包屑，例如“雅思学习 » 口语” */
+main .breadcrumbs {
+  display: none !important;
+}
+
+/* 全站 footer：统一显示当前页面和版权，保持轻量不打扰阅读 */
+#main {
+  padding-bottom: 58px;
+}
+
+main footer.site-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55rem;
+  overflow: hidden;
+  min-height: 40px;
+  margin-top: 0;
+  padding: 0 1rem;
+  border-top: 1px solid rgba(148, 163, 184, 0.16);
+  color: #94a3b8;
+  background: rgba(2, 6, 23, 0.96);
+  backdrop-filter: blur(12px);
+  font-size: 0.76rem;
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+}
+
+@media screen and (min-width: 768px) {
+  main footer.site-footer {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 322px;
+    z-index: 20;
+    box-sizing: border-box;
+    height: 40px;
+    max-height: 40px;
+  }
+}
+
+.site-footer-path,
+.site-footer-copyright {
+  display: inline-flex;
+  align-items: center;
+  flex: 0 1 auto;
+  min-width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.site-footer-path {
+  flex-shrink: 1;
+}
+
+.site-footer-copyright {
+  flex-shrink: 0;
+}
+
+.site-footer-separator,
+.site-footer-divider {
+  flex: 0 0 auto;
+}
+
+.site-footer-label,
+.site-footer-separator,
+.site-footer-divider {
+  color: #67e8f9;
+}
+
+.site-footer-path span,
+.site-footer-divider {
+  margin: 0 0.35rem !important;
+}
+
+.site-footer-path span:first-child {
+  margin-left: 0 !important;
+}
+
+.site-footer-path span:last-child {
+  margin-right: 0 !important;
+}
+
+.site-footer-current {
+  overflow: hidden;
+  color: #94a3b8;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.site-footer-copyright {
+  color: #94a3b8;
+}
+
+@media (max-width: 640px) {
+  #main {
+    padding-bottom: 1rem;
+  }
+
+  main footer.site-footer {
+    flex-wrap: wrap;
+    gap: 0.35rem 0.8rem;
+    margin-top: 1rem;
+    padding: 0.45rem 1rem;
+    line-height: 1.35;
+    white-space: normal;
+  }
+}
+
+/* PDF 页面：让 PDF 尽量占满右侧内容窗口，去掉默认留白 */
+#container:has(.pdf-viewer) {
+  min-height: 100vh;
+  min-height: 100dvh;
+  background: #020617;
+}
+
+#container:has(.pdf-viewer) #spacer {
+  display: none !important;
+  flex: 0 0 0 !important;
+  width: 0 !important;
+}
+
+#container:has(.pdf-viewer) main {
+  min-height: 100vh;
+  min-height: 100dvh;
+  background: #020617;
+}
+
+#main:has(.pdf-viewer) {
+  margin: 0 !important;
+  padding: 0 !important;
+  min-height: calc(100vh - 40px);
+  min-height: calc(100dvh - 40px);
+  background: #020617;
+}
+
+#main:has(.pdf-viewer) #content {
+  margin: 0 !important;
+  padding: 0 !important;
+  max-width: none !important;
+  width: 100% !important;
+  min-height: calc(100vh - 40px);
+  min-height: calc(100dvh - 40px);
+  background: #020617;
+}
+
+#main:has(.pdf-viewer) #content p {
+  margin: 0 !important;
+}
+
+.pdf-footer-path {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55rem;
+  overflow: hidden;
+  height: 40px;
+  min-height: 40px;
+  padding: 0 max(1rem, env(safe-area-inset-right)) 0 max(1rem, env(safe-area-inset-left));
+  color: #94a3b8;
+  background: rgba(2, 6, 23, 0.96);
+  font-size: 0.76rem;
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+}
+
+@media screen and (min-width: 768px) {
+  .pdf-footer-path {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 322px;
+    z-index: 30;
+    box-sizing: border-box;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .pdf-footer-path {
+    position: sticky;
+    bottom: 0;
+    z-index: 30;
+    height: auto;
+    min-height: 40px;
+    padding-top: 0.55rem;
+    padding-bottom: calc(0.55rem + env(safe-area-inset-bottom));
+    flex-wrap: wrap;
+    gap: 0.35rem 0.6rem;
+    line-height: 1.35;
+    white-space: normal;
+  }
+
+  .pdf-path-text,
+  .pdf-copyright-text {
+    max-width: 100%;
+  }
+}
+
+.pdf-footer-path span {
+  margin: 0;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.pdf-path-text {
+  flex: 0 1 auto;
+}
+
+.pdf-footer-divider,
+.pdf-copyright-text {
+  flex: 0 0 auto;
+}
+
+.pdf-path-text span,
+.pdf-footer-divider {
+  color: #67e8f9;
+  margin: 0 0.35rem !important;
+}
+
+.pdf-copyright-text {
+  color: #94a3b8;
+}
+
+#main:has(.pdf-viewer) footer {
+  display: none !important;
+  min-height: 0;
+  padding: 0;
+  border-top: 0;
+  color: #94a3b8;
+  background: #020617;
+  font-size: 0.76rem;
+}
+
+.pdf-viewer {
+  display: block;
+  width: 100% !important;
+  min-width: 100% !important;
+  height: calc(100vh - 40px) !important;
+  height: calc(100dvh - 40px) !important;
+  min-height: calc(100vh - 40px) !important;
+  min-height: calc(100dvh - 40px) !important;
+  border: 0;
+  background: #020617;
+}
+
+@media screen and (min-width: 768px) {
+  #main:has(.pdf-viewer) {
+    margin: 0 !important;
+  }
+
+  .pdf-viewer {
+    height: calc(100vh - 40px);
+    height: calc(100dvh - 40px);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .pdf-viewer {
+    height: calc(100vh - 92px) !important;
+    height: calc(100dvh - 92px) !important;
+    min-height: 420px !important;
+  }
+}
+
 aside {
   border-right: 0 !important;
   background:

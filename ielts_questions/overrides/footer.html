@@ -1,5 +1,13 @@
-<footer>
-  <div class="footer-text">
-    {{ config.copyright }}
+<footer class="site-footer">
+  <div class="site-footer-path">
+    {% for crumb in page.ancestors|reverse %}
+      <span class="site-footer-label">{% if crumb.title == "雅思学习" %}雅思{% else %}{{ crumb.title }}{% endif %}</span>
+      <span class="site-footer-separator">›</span>
+    {% endfor %}
+    <span class="site-footer-current">{{ page.title }}</span>
+  </div>
+  <span class="site-footer-divider">·</span>
+  <div class="footer-text site-footer-copyright">
+    © {{ config.copyright }}
   </div>
 </footer>
